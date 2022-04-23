@@ -1,5 +1,11 @@
 import { FC, memo } from "react";
+import { Header } from "../organisms/layout/Header";
 
 export const Setting: FC = memo(() => {
-  return <p>設定ページ</p>;
+  return (
+    <>
+      <Header />
+      <p>設定ページ</p>
+    </>
+  );
 });
