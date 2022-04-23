@@ -1,5 +1,11 @@
 import { FC, memo } from "react";
+import { Header } from "../organisms/layout/Header";
 
 export const UserManagement: FC = memo(() => {
-  return <p>ユーザー管理画面</p>;
+  return (
+    <>
+      <Header />
+      <p>ユーザー管理ページ</p>
+    </>
+  );
 });
