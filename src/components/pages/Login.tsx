@@ -22,7 +22,12 @@ export const Login: FC = memo(() => {
             value={userId}
             onChange={onChangeUserId}
           />
-          <PrimaryButton children={"ログイン"} onClick={onClickLogin} />
+          <PrimaryButton
+            children={"ログイン"}
+            onClick={onClickLogin}
+            loading={loading}
+            disabled={userId === ""}
+          />
         </Stack>
       </Box>
     </Flex>
