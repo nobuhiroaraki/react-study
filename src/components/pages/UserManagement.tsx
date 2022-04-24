@@ -1,11 +1,19 @@
 import { FC, memo } from "react";
-import { Header } from "../organisms/layout/Header";
+import { Wrap, WrapItem } from "@chakra-ui/react";
+import { UserCard } from "../organisms/layout/user/UserCard";
 
 export const UserManagement: FC = memo(() => {
   return (
-    <>
-      <Header />
-      <p>ユーザー管理ページ</p>
-    </>
+    <Wrap spacing="30px" p={{ base: 4, md: 10 }}>
+      {[...Array(100)].map(() => (
+        <WrapItem>
+          <UserCard
+            imageUrl="https://source.unsplash.com/random"
+            name="ニックネーム"
+            fullName="フルネーム"
+          />
+        </WrapItem>
+      ))}
+    </Wrap>
   );
 });
