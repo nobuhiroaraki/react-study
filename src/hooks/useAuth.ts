@@ -14,10 +14,10 @@ export const useAuth = () => {
           navigate("/home");
           return;
         } else {
-          alert("ユーザーが見つかりません");
+          alert("データを取得できませんでした");
         }
       })
-      .catch(() => alert("ログインできません"))
+      .catch(() => alert("ユーザーが見つかりませんでした"))
       .finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
